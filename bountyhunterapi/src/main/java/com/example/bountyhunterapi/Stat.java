@@ -1,12 +1,19 @@
 package com.example.bountyhunterapi;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.UUID;
 
 public class Stat {
+    @SerializedName("id")
     private int id;
+    @SerializedName("gid")
     private UUID gid;
+    @SerializedName("uid")
     private UUID uid;
+    @SerializedName("points")
     private int points;
+    @SerializedName("won")
     private boolean won;
 
     public Stat(int id, UUID gid, UUID uid, int points, boolean won) {

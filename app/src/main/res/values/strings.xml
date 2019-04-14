@@ -36,4 +36,11 @@
     <string name="friends_string">My Friends</string>
     <string name="stat_name_string">Stat Name</string>
     <string name="actual_stat_string">Actual Stat</string>
+    <string name="friend_s_name_string">Friend\'s Name</string>
+    <string name="position_string">Position:</string>
+    <string name="won_or_lost_string">W/L:</string>
+    <string name="points_string">Points:</string>
+    <string name="captures_string">Captures:</string>
+    <string name="challenges_completed_string">Challenges Completed:</string>
+    <string name="challenges_failed_string">Challenges Failed:</string>
 </resources>

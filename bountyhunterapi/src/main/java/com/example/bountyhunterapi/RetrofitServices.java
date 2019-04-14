@@ -26,11 +26,11 @@ public interface RetrofitServices {
 
     @FormUrlEncoded
     @POST("/users/")
-    Call<Void>registerUser(@Field("firstName") String firstName, @Field("lastName") String lastName,@Field("username") String username, @Field("email") String email,@Field("password") String password);
+    Call<Void> registerUser(@Field("firstName") String firstName, @Field("lastName") String lastName, @Field("username") String username, @Field("email") String email, @Field("password") String password);
 
     @FormUrlEncoded
     @POST("/users/login")
-    Call<Token>loginUser(@Field("username") String username, @Field("password") String password);
+    Call<Token> loginUser(@Field("username") String username, @Field("password") String password);
 
     //Creates the GET request that will be sent to request the JSON data
     @GET("/users/{id}")
@@ -41,28 +41,32 @@ public interface RetrofitServices {
 
     @FormUrlEncoded
     @PUT("/users/{id}")
-    Call<User> updateUser(@Header("Authorization") String authKey, @Path("id") UUID userID, @Field("firstName") String firstName, @Field("lastName") String lastName,@Field("username") String username, @Field("email") String email);
+    Call<User> updateUser(@Header("Authorization") String authKey, @Path("id") UUID userID, @Field("firstName") String firstName, @Field("lastName") String lastName, @Field("username") String username, @Field("email") String email);
 
     @FormUrlEncoded
-    @HTTP(method = "DELETE",path = "/users/{id}",hasBody = true)
-    Call<Void> deleteUser(@Header("Authorization") String authKey,@Path("id") UUID userID,@Field("password") String password);
+    @HTTP(method = "DELETE", path = "/users/{id}", hasBody = true)
+    Call<Void> deleteUser(@Header("Authorization") String authKey, @Path("id") UUID userID, @Field("password") String password);
 
     @GET("/users/search/{username}")
-    Call<UserList> searchUser(@Header("Authorization") String authKey,@Path("username") String username);
+    Call<UserList> searchUser(@Header("Authorization") String authKey, @Path("username") String username);
 
     @FormUrlEncoded
     @PATCH("/users/resetpassword")
-    Call<Void> resetPasswordRequest( @Field("email") String email);
+    Call<Void> resetPasswordRequest(@Field("email") String email);
 
     @FormUrlEncoded
     @POST("/users/resetpassword/{token}")
-    Call<Void> resetPassword(@Path("token") String token,@Field("newpassword") String newPassword);
+    Call<Void> resetPassword(@Path("token") String token, @Field("newpassword") String newPassword);
+
+    @FormUrlEncoded
+    @PUT("/users/{id}/changepassword")
+    Call<Void> changePassword(@Header("Authorization") String authKey, @Path("id") UUID userID, @Field("password") String currentPassword, @Field("newPassword") String newPassword);
 
     @GET("/users/stats/{id}/fugitive")
-    Call<Stat> getFugitiveStats(@Header("Authorization") String authKey, @Path("id") UUID userID);
+    Call<FugitiveStatList> getFugitiveStats(@Header("Authorization") String authKey, @Path("id") UUID userID);
 
     @GET("/users/stats/{id}/bountyhunter")
-    Call<Stat> getBountyHunterStats(@Header("Authorization") String authKey, @Path("id") UUID userID);
+    Call<BountyHunterStatList> getBountyHunterStats(@Header("Authorization") String authKey, @Path("id") UUID userID);
 
     @GET("/users/friends/{id}/followers")
     Call<FriendList> getFriendsFollowers(@Header("Authorization") String authKey, @Path("id") UUID userID);

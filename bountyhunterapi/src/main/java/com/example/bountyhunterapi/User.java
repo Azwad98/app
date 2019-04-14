@@ -96,4 +96,17 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this==obj){
+            return true;
+        }
+        if (obj==null||getClass()!=obj.getClass()){
+            return false;
+        }
+        User userToCompare =(User)obj;
+        return this.username.equals(userToCompare.getUsername())&&this.getEmail().equals(userToCompare.getEmail());
+
+    }
 }

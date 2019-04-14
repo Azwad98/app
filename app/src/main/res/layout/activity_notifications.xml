@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/darkblue">
+    android:background="@color/darkblue"
+    >
 
     <ImageButton
-        android:id="@+id/backFromMyFriends"
+        android:id="@+id/backFromMyNotifations"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
@@ -32,10 +33,9 @@
         android:fontFamily="@font/moderat_bold"
         android:gravity="center"
         android:padding="@dimen/_10sdp"
-        android:text="@string/friends_string"
+        android:text="Notifications"
         android:textColor="@color/white"
-        android:textSize="@dimen/_20sdp"
-        app:layout_constraintBottom_toTopOf="@+id/findFriendsBtn"
+        android:textSize="@dimen/_30sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -44,27 +44,12 @@
     <android.support.v7.widget.RecyclerView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:id="@+id/friends_recycler_view"
-        app:layout_constraintBottom_toTopOf="@id/findFriendsBtn"
+        android:id="@+id/notifications_recycler_view"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
-    <Button
-        android:id="@+id/findFriendsBtn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_10sdp"
-        android:layout_marginBottom="12dp"
-        android:background="@color/lightblue"
-        android:fontFamily="@font/moderat_regular"
-        android:text="@string/find_friends_string"
-        android:textAllCaps="false"
-        android:textColor="@color/darkblue"
-        android:textSize="@dimen/_15sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
-        app:layout_constraintStart_toStartOf="parent" />
+
 
 </android.support.constraint.ConstraintLayout>

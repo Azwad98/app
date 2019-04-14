@@ -43,4 +43,17 @@ public class Friend {
     public User getFriend() {
         return this.friend;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+       if (this==obj){
+           return true;
+       }
+       if (obj==null||getClass()!=obj.getClass()){
+           return false;
+       }
+       Friend friendToCompare =(Friend)obj;
+       return friend.getUsername().equals(friendToCompare.getFriend().getUsername())&& friend.getEmail().equals(friendToCompare.getFriend().getEmail());
+
+    }
 }

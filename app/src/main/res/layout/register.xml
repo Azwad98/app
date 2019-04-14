@@ -39,7 +39,6 @@
     <TextView
         android:id="@+id/text2"
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
         android:layout_below="@+id/createAccountText"
         android:layout_marginStart="16dp"

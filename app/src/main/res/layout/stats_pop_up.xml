@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/darkblue">
+
+
+    <TextView
+        android:id="@+id/positionPopUp"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:text="@string/position_string"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_17sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/pointsPopUp"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:text="@string/points_string"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_17sdp"
+        app:layout_constraintTop_toBottomOf="@+id/positionPopUp"/>
+
+    <TextView
+        android:id="@+id/wonOrLostPopUp"
+        android:layout_height="58dp"
+        android:layout_width="match_parent"
+        android:text="@string/won_or_lost_string"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_17sdp"
+        app:layout_constraintTop_toBottomOf="@+id/pointsPopUp"/>
+
+    <TextView
+        android:id="@+id/capturesPopUp"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:text="@string/captures_string"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_17sdp"
+        app:layout_constraintTop_toBottomOf="@+id/wonOrLostPopUp"/>
+
+    <TextView
+        android:id="@+id/challengesCompletedPopUp"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:text="@string/challenges_completed_string"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_17sdp"
+        app:layout_constraintTop_toBottomOf="@+id/wonOrLostPopUp"/>
+
+    <TextView
+        android:id="@+id/challengesFailedPopUp"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:text="@string/challenges_failed_string"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_17sdp"
+        app:layout_constraintTop_toBottomOf="@+id/challengesCompletedPopUp"/>
+
+</android.support.constraint.ConstraintLayout>
